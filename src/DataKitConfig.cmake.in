@@ -1,0 +1,5 @@
+# RestLink Configuration file
+@PACKAGE_INIT@
+
+# Importing targets
+include(${CMAKE_CURRENT_LIST_DIR}/DataKitTargets.cmake)
