@@ -32,11 +32,11 @@ include(cmake/Utils.cmake)
 add_subdirectory(src)
 
 if (DATAKIT_BUILD_DOCS)
-    add_subdirectory(docs)
+    #add_subdirectory(docs)
 endif()
 
 #add_subdirectory(tests)
 
 if (DATAKIT_BUILD_EXAMPLES)
-    add_subdirectory(examples)
+    #add_subdirectory(examples)
 endif()
