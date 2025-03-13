@@ -2,7 +2,6 @@
 #include "etl_p.h"
 
 #include <DataKit/data.h>
-#include <DataKit/value.h>
 
 #include <QtCore/qvariant.h>
 
