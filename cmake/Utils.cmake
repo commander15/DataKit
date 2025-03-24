@@ -1,3 +1,5 @@
+option(DataKit_SHOW_HEADERS "add headers on targets as sources" ON)
+
 function(target_headers target)
     set(options)
     set(oneValueArgs)
@@ -14,6 +16,10 @@ function(target_headers target)
     if (ARG_PRIVATE)
         list(TRANSFORM ARG_PRIVATE PREPEND ${CMAKE_CURRENT_SOURCE_DIR}/)
         set_property(TARGET ${target} APPEND PROPERTY PRIVATE_HEADER ${ARG_PRIVATE})
+    endif()
+    
+    if (DataKit_SHOW_HEADERS)
+        target_sources(${target} PRIVATE ${ARG_PUBLIC} ${ARG_PRIVATE})
     endif()
 endfunction()
 
